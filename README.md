@@ -4,5 +4,5 @@ To run the system (the command must be run in the directory where manage.py resi
 python manage.py runserver
 
 To access the web interface,
-<given address for browser>/frontend
+"web address"/frontend
 Eg.  http://127.0.0.1:8000/frontend
