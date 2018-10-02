@@ -1,0 +1,31 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Emotion Detection</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+        <link rel="stylesheet" href="{% static 'form.css' %}" >
+    </head>
+    <body >
+        <!--"-->
+        <div class="container">
+            <div id="form-main">
+                <div id="form-div">
+                    <form class="montform" action="{% url 'frontend:result' %}" id="reused_form" method="POST">{% csrf_token %}
+                        <p class="text">
+                            <textarea name="message" class="feedback-input" id="text" name="text_to_analyze" placeholder="Enter text to be analyzed"></textarea>
+                        </p>
+                        <div class="submit">
+                            <button type="submit" class="button-blue" name='submit_btn'>SUBMIT</button>
+                            <div class="ease"></div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

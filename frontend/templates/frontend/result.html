@@ -1,0 +1,43 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Emotion Detection</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+        <link rel="stylesheet" href="{% static 'form.css' %}" >
+        <!--<script src="{% static 'form.js' %} style="width:100%; height:100%;"></script> -->
+    </head>
+    <body >
+        <div class="container">
+            <div id="form-main">
+                <div id="form-div">
+                    <div id="success_message">
+                        <div class="slidecontainer">               
+                        <h3>TEXT:</h3>
+                        <h3> {{text}} </h3>
+                        <label style="text-align:left;display:block;" for="anger" class="margin">Anger:</label>
+                        	<input type="range" min="0" max="100" value="{{anger}}" class="slider" id="anger" name="anger"><br/>
+                        <label style="text-align:left;display:block;" for="disgust" class="margin">Disgust:</label>
+                        	<input type="range" min="0" max="100" value="{{disgust}}" class="slider" id="disgust" name="disgust"><br/>
+                        <label style="text-align:left;display:block;" for="fear" class="margin">Fear:</label>
+                        	<input type="range" min="0" max="100" value="{{fear}}" class="slider" id="fear" name="fear"><br/>
+                        <label style="text-align:left;display:block;" for="guilt" class="margin">Guilt:</label>
+                        	<input type="range" min="0" max="100" value="{{guilt}}" class="slider" id="guilt" name="guilt"> <br/> 
+                        <label style="text-align:left;display:block;" for="joy" class="margin">Joy:</label>	
+                        	<input type="range" min="0" max="100" value="{{joy}}" class="slider" id="joy" name="joy"> <br/>
+                        <label style="text-align:left;display:block;" for="sadness" class="margin">Sadness:</label>
+                        	<input type="range" min="0" max="100" value="{{sadness}}" class="slider" id="sadness" name="sadness"> <br/> 
+                        <label style="text-align:left;display:block;" for="shame" class="margin">Shame:</label>
+                        	<input type="range" min="0" max="100" value="{{shame}}" class="slider" id="shame" name="shame"> <br/> 
+                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+                            
+    </body>
+</html>
